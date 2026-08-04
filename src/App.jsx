@@ -31,19 +31,39 @@ function NotFound() {
   );
 }
 
-/* Restores scroll on navigation, and honours #case-slug links into the Work page. */
+/* Restores scroll on navigation, and honours #case-slug links into the Work page.
+ * The target is re-asserted a few times because a cold load settles its layout
+ * after we first scroll (fonts swapping in, lazy images resolving), which would
+ * otherwise leave the anchor stranded mid-page. */
 function ScrollManager() {
   const { pathname, hash } = useLocation();
+
   useEffect(() => {
-    if (hash) {
-      const el = document.getElementById(hash.slice(1));
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
     }
-    window.scrollTo(0, 0);
+
+    const id = hash.slice(1);
+    let attempt = 0;
+    let timer;
+
+    const settle = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        const top = el.getBoundingClientRect().top;
+        // Only re-scroll while the anchor is still meaningfully off-target.
+        if (attempt === 0 || Math.abs(top) > 2) {
+          el.scrollIntoView({ behavior: attempt === 0 ? "smooth" : "auto", block: "start" });
+        }
+      }
+      if (++attempt < 4) timer = setTimeout(settle, 250);
+    };
+
+    timer = setTimeout(settle, 0);
+    return () => clearTimeout(timer);
   }, [pathname, hash]);
+
   return null;
 }
 

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>builtbymostafaK© — Creative Studio</title>
+    <!--
+      GitHub Pages has no server-side rewrites, so a direct visit to /work
+      lands here. Encode the requested path into a query string and bounce to
+      the root; the matching script in index.html restores it before React
+      mounts, so the router sees the real URL.
+    -->
+    <script>
+      (function (l) {
+        l.replace(
+          l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") +
+          "/?/" +
+          l.pathname.slice(1).replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash
+        );
+      })(window.location);
+    </script>
+    <style>
+      html, body { margin: 0; padding: 0; background: #0B0B0A; color: #948C7B;
+        font-family: system-ui, sans-serif; }
+      .n { min-height: 100vh; display: flex; align-items: center;
+        justify-content: center; text-align: center; padding: 40px; }
+      a { color: #B08D57; }
+    </style>
+  </head>
+  <body>
+    <!-- Only seen if JavaScript is disabled. -->
+    <div class="n">
+      <noscript>This site needs JavaScript. <a href="/">Return to the studio</a>.</noscript>
+    </div>
+  </body>
+</html>
