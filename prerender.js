@@ -26,7 +26,7 @@ const esc = (s) =>
  * Writes a real static HTML file for every route in every language.
  *
  * Without this, GitHub Pages returns HTTP 404 for anything but "/" and relies on
- * a JS bounce — which browsers tolerate but crawlers read as "page not found".
+ * a JS bounce, which browsers tolerate but crawlers read as "page not found".
  * Emitting real files means every route answers 200, and each one carries its own
  * title, description, canonical, and reciprocal hreflang in the raw HTML, so none
  * of it depends on the crawler executing JavaScript.

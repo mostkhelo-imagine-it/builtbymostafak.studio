@@ -19,7 +19,7 @@ export default function Nav() {
     <>
       <nav className="bmk-nav">
         <Link to={href("/")} className="bmk-logo" aria-label={t.ui.homeAria}>
-          <img src="/assets/wordmark.png" alt="builtbymostafaK© — Creative Studio" />
+          <img src="/assets/wordmark.png" alt="builtbymostafaK© Creative Studio" />
         </Link>
 
         <div className="bmk-links">
