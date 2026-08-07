@@ -1,5 +1,181 @@
 export const EMAIL = "step@builtbymostafak.studio";
 
+export const ui = {
+  nav: {
+    home: "Home",
+    work: "Work",
+    services: "Services",
+    notes: "Notes",
+    about: "About",
+    contact: "Contact",
+  },
+  openMenu: "Open menu",
+  closeMenu: "Close menu",
+  switchTo: "عربي",
+  switchLabel: "التبديل إلى العربية",
+  homeAria: "builtbymostafaK — home",
+};
+
+export const hero = {
+  eyebrow: "Creative Studio — Egypt & MENA",
+  headline: "I help founders, leaders, and creators turn",
+  headlineEm: "what they feel",
+  headlineRest: "into brands people can see, trust, and believe in.",
+  lead: "My work begins wherever clarity is missing. Sometimes it's the start of an idea. Other times it's when something established needs to evolve. In both cases, I help shape what's inside into something others can understand and connect with.",
+  ctaPrimary: "Schedule a Clarity Session",
+  ctaSecondary: "Explore Inside the Work",
+};
+
+export const story = {
+  eyebrow: "The Story Behind the Studio",
+  rows: [
+    {
+      num: "I'm not an agency",
+      body: "I don't deliver volume or monthly content. My work is not typical agency output — it's not about a flashy logo, a neat campaign, or a clean brochure. I sit at the conceptual layer, before design and before marketing, where nothing exists yet. From messy feelings and scattered thoughts, I create the first structure, the first story, the first form that makes others say: \"Now I see it.\"",
+      caption: "On site — reading the ground first",
+    },
+    {
+      num: "Intentional, not ordinary",
+      body: "I work closely and intentionally with founders and institutions across Egypt and the MENA region, turning fragile ideas into living structures, brands, and experiences built to last. Everything I create begins in thought and expands outward into story, identity, and experience.",
+      caption: "Mostafa Khalil — Brand Architect & Strategist",
+    },
+    {
+      num: "My work is often confidential",
+      body: "Clients trust me with ideas at their earliest stage, when they're not yet ready for the world. I hold that trust, shape it into clarity, and reveal it when the time is right. Some projects remain private; others become public movements. All carry transformation — and each moves through the same rhythm of care, precision, and truth.",
+      caption: "Evening session on site",
+    },
+  ],
+};
+
+export const approachPanel = {
+  eyebrow: "My Approach",
+  quote:
+    "Every collaboration begins with clarity. Whether I'm shaping something new or guiding an existing brand into its next chapter, the rhythm is always the same.",
+  rhythm: "Clarity → Form → Expression → Growth",
+};
+
+export const workPage = {
+  eyebrow: "Inside the Work",
+  title: "Every project carries a moment of clarity",
+  intro:
+    "These are documentation, not a showcase. Told truthfully and without client names — some stories are still in motion, others complete, but all of them are alive.",
+  closing: "Every story begins the same way: listening, shaping, revealing, growing.",
+  builtLabel: "What I built",
+};
+
+export const notesPage = {
+  eyebrow: "Field Notes",
+  title: "A quiet space for reflection.",
+  intro: "Short writings about clarity, creativity, and what it means to build something real.",
+  outro:
+    "Each note is a small piece of what I've learned walking beside founders and creators. If one of them feels close to your own story, we can explore it together.",
+  cta: "Start a conversation",
+};
+
+export const servicesPage = {
+  eyebrow: "Work With Me",
+  title: "I work with founders, institutions, and creators who are building something real.",
+  intro:
+    "Some come at the beginning of an idea, others when things need to evolve. My role is to bring clarity, story, and structure to what you're creating.",
+  cta: "Send Project Brief",
+};
+
+export const about = {
+  eyebrow: "About",
+  title: "It's my name, my mind, my lens.",
+  body: [
+    "builtbymostafaK© is not an office. It's my field of work. Everything I create begins in thought and expands outward into story, identity, and experience.",
+    "Sometimes that means shaping a movement. Other times it means designing a brand, writing a narrative, or envisioning an event. What unites it all is intention — bringing clarity, story, and structure to ideas that deserve to live.",
+  ],
+  sig: "truth, by design",
+  ctaPrimary: "Explore Inside the Work",
+  ctaSecondary: "Work With Me",
+  valuesEyebrow: "How I Work",
+  values: [
+    {
+      k: "Confidential by default",
+      v: "Clients trust me with ideas at their earliest, most fragile stage — before they're ready for the world. That trust is held, not traded on.",
+    },
+    {
+      k: "Intentional, not volume",
+      v: "No ordinary, by-the-book monthly output. Every project is worked closely and intentionally, from first structure to final form.",
+    },
+    {
+      k: "Rooted in Egypt & MENA",
+      v: "Working closely with founders and institutions across the region — building brands, movements, and experiences meant to last.",
+    },
+  ],
+  quote:
+    "I sit at the conceptual layer — before design, before marketing — where nothing exists yet. From messy feelings and scattered thoughts, I create the first structure, the first story, the first form that makes others say: \"Now I see it.\"",
+};
+
+export const contact = {
+  eyebrow: "Get in Touch",
+  title: "If you're building something real,",
+  titleEm: "I'm ready when you are.",
+  intro:
+    "My work often starts with a conversation before it starts with a brief. Reach out, and tell me what you're carrying.",
+  fields: [
+    { k: "Based in", v: "Egypt — working across MENA" },
+    { k: "Response time", v: "Within a few days" },
+    { k: "Best for", v: "Founders, institutions, creators" },
+  ],
+};
+
+export const homeSections = {
+  helpEyebrow: "How I Help",
+  helpTitle:
+    "I help institutions, leaders, and creators bring clarity, story, and structure to what they're building.",
+  workEyebrow: "Inside the Work",
+  workTitle: "Every project carries a moment of clarity — the point where an idea becomes real.",
+  workCta: "See all stories",
+};
+
+export const footer = {
+  eyebrow: "Not an office. A field of work.",
+  body: "Everything I create begins in thought and expands outward — into story, identity, and experience. Sometimes that means shaping a movement, other times designing a brand, writing a narrative, or envisioning an event.",
+  signoff: "It's my name, my mind, my lens.",
+  final: "If you're building something real and want to build it right — I'm ready when you are.",
+  cta: "Send Project Brief",
+  rights: "© 2026 builtbymostafaK© — Creative Studio. Clarity. Story. Structure.",
+  privacy: "No cookies. No tracking. Only clarity.",
+};
+
+export const notFound = {
+  title: "This page hasn't been shaped yet.",
+  body: "The link you followed doesn't lead anywhere — but the work does.",
+  cta: "Back to the studio",
+};
+
+export const meta = {
+  "/": {
+    title: "builtbymostafaK© — Creative Studio",
+    description:
+      "I help founders, leaders, and creators turn what they feel into brands people can see, trust, and believe in. Egypt & MENA.",
+  },
+  "/work": {
+    title: "Inside the Work — builtbymostafaK©",
+    description:
+      "Seven stories about the moment an idea becomes real. Told truthfully and without client names.",
+  },
+  "/services": {
+    title: "Work With Me — builtbymostafaK©",
+    description: "Clarity sessions, brand and story architecture, and creative direction for institutions.",
+  },
+  "/notes": {
+    title: "Field Notes — builtbymostafaK©",
+    description: "Short writings about clarity, creativity, and what it means to build something real.",
+  },
+  "/about": {
+    title: "About — builtbymostafaK©",
+    description: "builtbymostafaK© is not an office. It's my name, my mind, my lens.",
+  },
+  "/contact": {
+    title: "Contact — builtbymostafaK©",
+    description: "If you're building something real, I'm ready when you are.",
+  },
+};
+
 export const helpCards = [
   {
     idx: "01",

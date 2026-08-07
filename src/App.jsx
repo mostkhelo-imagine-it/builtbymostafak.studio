@@ -8,24 +8,17 @@ import Services from "./pages/Services";
 import Notes from "./pages/Notes";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-
-const TITLES = {
-  "/": "builtbymostafaK© — Creative Studio",
-  "/work": "Inside the Work — builtbymostafaK©",
-  "/services": "Work With Me — builtbymostafaK©",
-  "/notes": "Field Notes — builtbymostafaK©",
-  "/about": "About — builtbymostafaK©",
-  "/contact": "Contact — builtbymostafaK©",
-};
+import { useLocale, parsePath, getBundle, localeHref, canonicalUrl, PATHS } from "./i18n";
 
 function NotFound() {
+  const { t, href } = useLocale();
   return (
     <div className="bmk-404">
       <span className="mono bmk-eyebrow">404</span>
-      <h1>This page hasn't been shaped yet.</h1>
-      <p>The link you followed doesn't lead anywhere — but the work does.</p>
-      <Link className="bmk-btn" to="/">
-        Back to the studio
+      <h1>{t.notFound.title}</h1>
+      <p>{t.notFound.body}</p>
+      <Link className="bmk-btn" to={href("/")}>
+        {t.notFound.cta}
       </Link>
     </div>
   );
@@ -52,7 +45,6 @@ function ScrollManager() {
       const el = document.getElementById(id);
       if (el) {
         const top = el.getBoundingClientRect().top;
-        // Only re-scroll while the anchor is still meaningfully off-target.
         if (attempt === 0 || Math.abs(top) > 2) {
           el.scrollIntoView({ behavior: attempt === 0 ? "smooth" : "auto", block: "start" });
         }
@@ -67,27 +59,75 @@ function ScrollManager() {
   return null;
 }
 
-function TitleManager() {
+/* Keeps <html lang/dir>, the title, description, canonical and hreflang tags in
+ * sync during client-side navigation. The prerenderer writes the same tags into
+ * the static HTML, so crawlers see them without running any JavaScript. */
+function HeadManager() {
   const { pathname } = useLocation();
+
   useEffect(() => {
-    document.title = TITLES[pathname] || "builtbymostafaK© — Creative Studio";
+    const { locale, path } = parsePath(pathname);
+    const bundle = getBundle(locale);
+    const info = bundle.meta[path] || bundle.meta["/"];
+
+    document.documentElement.lang = locale;
+    document.documentElement.dir = locale === "ar" ? "rtl" : "ltr";
+    document.title = info.title;
+
+    const set = (selector, attrs) => {
+      let el = document.head.querySelector(selector);
+      if (!el) {
+        el = document.createElement(attrs.tag);
+        document.head.appendChild(el);
+      }
+      Object.entries(attrs).forEach(([k, v]) => k !== "tag" && el.setAttribute(k, v));
+    };
+
+    set('meta[name="description"]', { tag: "meta", name: "description", content: info.description });
+    set('link[rel="canonical"]', { tag: "link", rel: "canonical", href: canonicalUrl(locale, path) });
+
+    document.head.querySelectorAll('link[rel="alternate"]').forEach((el) => el.remove());
+    [
+      ["en", canonicalUrl("en", path)],
+      ["ar", canonicalUrl("ar", path)],
+      ["x-default", canonicalUrl("en", path)],
+    ].forEach(([lang, url]) => {
+      const el = document.createElement("link");
+      el.setAttribute("rel", "alternate");
+      el.setAttribute("hreflang", lang);
+      el.setAttribute("href", url);
+      document.head.appendChild(el);
+    });
   }, [pathname]);
+
   return null;
 }
 
+const PAGES = {
+  "/": Home,
+  "/work": Work,
+  "/services": Services,
+  "/notes": Notes,
+  "/about": About,
+  "/contact": Contact,
+};
+
 export default function App() {
+  const { locale } = useLocale();
+
   return (
-    <div className="bmk">
+    <div className="bmk" lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <ScrollManager />
-      <TitleManager />
+      <HeadManager />
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/notes" element={<Notes />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        {PATHS.map((p) => {
+          const Page = PAGES[p];
+          return [
+            <Route key={`en${p}`} path={p} element={<Page />} />,
+            <Route key={`ar${p}`} path={localeHref("ar", p)} element={<Page />} />,
+          ];
+        })}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

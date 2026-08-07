@@ -1,37 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>builtbymostafaK© — Creative Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found — builtbymostafaK©</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <!--
-      GitHub Pages has no server-side rewrites, so a direct visit to /work
-      lands here. Encode the requested path into a query string and bounce to
-      the root; the matching script in index.html restores it before React
-      mounts, so the router sees the real URL.
+      Every real route is emitted as its own static file at build time (see
+      prerender.js), so GitHub Pages answers them with a 200 directly. This page
+      is only reached by genuinely unknown URLs, and is a plain 404 -- no JS
+      bounce, which previously made crawlers see real pages as "not found".
     -->
-    <script>
-      (function (l) {
-        l.replace(
-          l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") +
-          "/?/" +
-          l.pathname.slice(1).replace(/&/g, "~and~") +
-          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
-          l.hash
-        );
-      })(window.location);
-    </script>
     <style>
       html, body { margin: 0; padding: 0; background: #0B0B0A; color: #948C7B;
-        font-family: system-ui, sans-serif; }
-      .n { min-height: 100vh; display: flex; align-items: center;
-        justify-content: center; text-align: center; padding: 40px; }
-      a { color: #B08D57; }
+        font-family: 'Inter', system-ui, sans-serif; }
+      .w { min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+        justify-content: center; text-align: center; padding: 40px; gap: 18px; }
+      img { width: 190px; opacity: 0.5; }
+      h1 { color: #EDE7DC; font-weight: 400; font-size: 28px; margin: 0; }
+      p { margin: 0; max-width: 380px; line-height: 1.7; }
+      a { display: inline-block; margin-top: 14px; color: #EDE7DC; text-decoration: none;
+        border: 1px solid #B08D57; padding: 13px 24px; font-size: 13px;
+        letter-spacing: 0.08em; text-transform: uppercase; }
+      a:hover { background: #B08D57; color: #0B0B0A; }
     </style>
   </head>
   <body>
-    <!-- Only seen if JavaScript is disabled. -->
-    <div class="n">
-      <noscript>This site needs JavaScript. <a href="/">Return to the studio</a>.</noscript>
+    <div class="w">
+      <img src="/assets/wordmark.png" alt="builtbymostafaK©" />
+      <h1>This page hasn't been shaped yet.</h1>
+      <p>The link you followed doesn't lead anywhere &mdash; but the work does.</p>
+      <a href="/">Back to the studio</a>
     </div>
   </body>
 </html>

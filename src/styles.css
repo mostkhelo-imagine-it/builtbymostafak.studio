@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+/* Arabic: Amiri carries the editorial weight of Fraunces in Naskh; IBM Plex Sans
+ * Arabic is the sibling of the Plex Mono already used for labels. */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap');
 
 /* ------------------------------------------------------------------ */
 /*  builtbymostafaK — Creative Studio                                  */
@@ -271,6 +274,88 @@
 .bmk-404 { min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 5vw; gap: 22px; }
 .bmk-404 h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: clamp(28px, 4vw, 44px); margin: 0; }
 .bmk-404 p { color: var(--text2); font-size: 16px; max-width: 440px; line-height: 1.7; margin: 0; }
+
+/* ------------------------------------------------------------------ */
+/*  Arabic + RTL                                                       */
+/* ------------------------------------------------------------------ */
+
+.bmk[lang="ar"] {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+.bmk[lang="ar"] .serif,
+.bmk[lang="ar"] h1,
+.bmk[lang="ar"] h2,
+.bmk[lang="ar"] h3,
+.bmk[lang="ar"] h4 {
+  font-family: 'Amiri', serif;
+}
+
+/* Arabic is cursive: letters must join. letter-spacing severs them into
+ * unreadable fragments, and there is no uppercase to transform to. Both have to
+ * be neutralised everywhere the Latin design relies on them. */
+.bmk[lang="ar"] .mono,
+.bmk[lang="ar"] .bmk-link,
+.bmk[lang="ar"] .bmk-btn,
+.bmk[lang="ar"] .bmk-eyebrow,
+.bmk[lang="ar"] .num,
+.bmk[lang="ar"] .idx,
+.bmk[lang="ar"] .tag,
+.bmk[lang="ar"] .n,
+.bmk[lang="ar"] .k,
+.bmk[lang="ar"] .label,
+.bmk[lang="ar"] .meta,
+.bmk[lang="ar"] .bmk-rhythm,
+.bmk[lang="ar"] .bmk-fig figcaption,
+.bmk[lang="ar"] .bmk-plate span,
+.bmk[lang="ar"] .bottom-row,
+.bmk[lang="ar"] .field .mono {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* Amiri sits smaller on the line than Fraunces; nudge display sizes up. */
+.bmk[lang="ar"] .bmk-hero h1 { font-size: clamp(34px, 5.2vw, 64px); line-height: 1.25; }
+.bmk[lang="ar"] .bmk-h2 { line-height: 1.4; }
+.bmk[lang="ar"] .bmk-quote-panel p { font-style: normal; line-height: 1.75; }
+.bmk[lang="ar"] .signoff,
+.bmk[lang="ar"] .final,
+.bmk[lang="ar"] .sig,
+.bmk[lang="ar"] .bmk-note h3,
+.bmk[lang="ar"] .email-big { font-style: normal; }
+.bmk[lang="ar"] .bmk-hero h1 em,
+.bmk[lang="ar"] .bmk-contact h1 em { font-style: normal; }
+
+/* Keep the Latin wordmark and email address left-to-right inside RTL text. */
+.bmk[dir="rtl"] .email-big,
+.bmk[dir="rtl"] .bottom-row a { direction: ltr; unicode-bidi: embed; display: inline-block; }
+
+/* ---- mirrored directional properties ---- */
+.bmk[dir="rtl"] .bmk-fig figcaption {
+  left: auto; right: 0;
+  border-right: none; border-left: 1px solid var(--hair);
+}
+.bmk[dir="rtl"] .bmk-mobile-close { right: auto; left: 24px; }
+.bmk[dir="rtl"] .bmk-case .built {
+  border-left: none; border-right: 2px solid var(--accent2);
+}
+.bmk[dir="rtl"] .bmk-contact .field { text-align: right; }
+.bmk[dir="rtl"] .bmk-hero-bg::after {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 0%, rgba(176,141,87,0.14), transparent 60%),
+    linear-gradient(180deg, rgba(11,11,10,0.86) 0%, rgba(11,11,10,0.96) 70%, #0B0B0A 100%);
+}
+.bmk[dir="rtl"] .bmk-story-row { grid-template-columns: 1.1fr 0.9fr; }
+.bmk[dir="rtl"] .bmk-story-row.flip { grid-template-columns: 0.9fr 1.1fr; }
+
+/* The language switch reads as an action, not a section. */
+.bmk-lang {
+  border: 1px solid var(--hair);
+  padding: 5px 12px !important;
+  color: var(--accent) !important;
+}
+.bmk-lang:hover { border-color: var(--accent); }
+.bmk-lang.active::after { display: none; }
 
 /* ---- responsive ---- */
 @media (max-width: 900px) {

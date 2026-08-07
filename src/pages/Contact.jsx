@@ -1,34 +1,28 @@
-import { EMAIL } from "../content";
+import { useLocale } from "../i18n";
 
 export default function Contact() {
+  const { t } = useLocale();
+  const c = t.contact;
+
   return (
     <div className="bmk-contact">
-      <span className="mono bmk-eyebrow">Get in Touch</span>
+      <span className="mono bmk-eyebrow">{c.eyebrow}</span>
       <h1 className="serif">
-        If you're building something real,
+        {c.title}
         <br />
-        <em>I'm ready when you are.</em>
+        <em>{c.titleEm}</em>
       </h1>
-      <p className="intro">
-        My work often starts with a conversation before it starts with a brief. Reach out, and tell me
-        what you're carrying.
-      </p>
-      <a className="email-big" href={`mailto:${EMAIL}?subject=Project%20Brief`}>
-        {EMAIL}
+      <p className="intro">{c.intro}</p>
+      <a className="email-big" href={`mailto:${t.EMAIL}?subject=Project%20Brief`}>
+        {t.EMAIL}
       </a>
       <div className="fields">
-        <div className="field">
-          <span className="mono">Based in</span>
-          <div className="val">Egypt — working across MENA</div>
-        </div>
-        <div className="field">
-          <span className="mono">Response time</span>
-          <div className="val">Within a few days</div>
-        </div>
-        <div className="field">
-          <span className="mono">Best for</span>
-          <div className="val">Founders, institutions, creators</div>
-        </div>
+        {c.fields.map((f) => (
+          <div className="field" key={f.k}>
+            <span className="mono">{f.k}</span>
+            <div className="val">{f.v}</div>
+          </div>
+        ))}
       </div>
     </div>
   );

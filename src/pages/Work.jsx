@@ -1,6 +1,6 @@
 import Reveal from "../components/Reveal";
 import Media from "../components/Media";
-import { cases } from "../content";
+import { useLocale } from "../i18n";
 
 function Body({ text }) {
   const parts = text.split(/\*\*(.*?)\*\*/g);
@@ -8,26 +8,28 @@ function Body({ text }) {
 }
 
 export default function Work() {
+  const { t } = useLocale();
+  const p = t.workPage;
+
   return (
     <div>
       <div className="bmk-section tight" style={{ textAlign: "center", paddingBottom: 20 }}>
         <Reveal>
-          <span className="mono bmk-eyebrow">Inside the Work</span>
+          <span className="mono bmk-eyebrow">{p.eyebrow}</span>
         </Reveal>
         <Reveal>
           <h1 className="serif" style={{ fontWeight: 400, fontSize: "clamp(32px,5vw,54px)", margin: "16px 0 20px" }}>
-            Every project carries a moment of clarity
+            {p.title}
           </h1>
         </Reveal>
         <Reveal>
           <p style={{ color: "var(--text2)", maxWidth: 620, margin: "0 auto", lineHeight: 1.75, fontSize: 16 }}>
-            These are documentation, not a showcase. Told truthfully and without client names — some
-            stories are still in motion, others complete, but all of them are alive.
+            {p.intro}
           </p>
         </Reveal>
       </div>
 
-      {cases.map((c) => (
+      {t.cases.map((c) => (
         <article className="bmk-case" id={c.slug} key={c.slug}>
           <Reveal>
             <span className="tag mono">{c.tag}</span>
@@ -43,11 +45,11 @@ export default function Work() {
               {c.label}
             </Reveal>
             <Reveal>
-              {c.body.map((t, i) => (
-                <Body key={i} text={t} />
+              {c.body.map((text, i) => (
+                <Body key={i} text={text} />
               ))}
               <div className="built">
-                <span className="k">What I built</span>
+                <span className="k">{p.builtLabel}</span>
                 <p>{c.built}</p>
               </div>
             </Reveal>
@@ -67,7 +69,7 @@ export default function Work() {
       <div className="bmk-section tight" style={{ textAlign: "center" }}>
         <Reveal>
           <p className="serif" style={{ fontStyle: "italic", fontSize: 22, color: "var(--accent)", margin: 0 }}>
-            Every story begins the same way: listening, shaping, revealing, growing.
+            {p.closing}
           </p>
         </Reveal>
       </div>
