@@ -48,17 +48,20 @@ export default function Work() {
               {c.body.map((text, i) => (
                 <Body key={i} text={text} />
               ))}
-              <div className="built">
-                <span className="k">{p.builtLabel}</span>
-                <p>{c.built}</p>
-              </div>
+              {c.built && (
+                <div className="built">
+                  <span className="k">{p.builtLabel}</span>
+                  <p>{c.built}</p>
+                </div>
+              )}
+              {c.note && <p className="case-note">{c.note}</p>}
             </Reveal>
           </div>
           {c.gallery && (
             <Reveal>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 40 }}>
+              <div className="bmk-case-gallery">
                 {c.gallery.map((g) => (
-                  <Media key={g.src} image={g} style={{ height: 240 }} />
+                  <Media key={g.src} image={g} />
                 ))}
               </div>
             </Reveal>

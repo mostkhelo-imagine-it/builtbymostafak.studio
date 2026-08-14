@@ -17,6 +17,10 @@
   --text2: #948C7B;
   --accent: #B08D57;
   --accent2: #6E6250;
+  /* Label/monospace stack. Swapped wholesale for Arabic below, rather than
+   * relying on per-character fallback, so that spaces come from the same font
+   * as the letters. Mixing the two leaves Arabic words drifting apart. */
+  --mono: 'IBM Plex Mono', monospace;
   background: var(--bg);
   color: var(--text);
   font-family: 'Inter', sans-serif;
@@ -26,7 +30,7 @@
 }
 .bmk * { box-sizing: border-box; }
 .bmk .serif { font-family: 'Fraunces', serif; }
-.bmk .mono { font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase; }
+.bmk .mono { font-family: var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
 
 /* ---- nav ---- */
 .bmk-nav {
@@ -43,7 +47,7 @@
 .bmk-link {
   background: none; border: none; cursor: pointer;
   color: var(--text2); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
-  font-family: 'IBM Plex Mono', monospace; padding: 4px 0; position: relative;
+  font-family: var(--mono); padding: 4px 0; position: relative;
   transition: color 0.25s; text-decoration: none; white-space: nowrap;
 }
 .bmk-link:hover { color: var(--text); }
@@ -93,7 +97,7 @@
 .bmk-fig:hover img { filter: grayscale(0.55) contrast(1.05) brightness(0.92); transform: scale(1.02); }
 .bmk-fig figcaption {
   position: absolute; left: 0; bottom: 0; z-index: 2;
-  font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--text2); padding: 10px 14px; background: rgba(11,11,10,0.72);
   border-top: 1px solid var(--hair); border-right: 1px solid var(--hair);
 }
@@ -112,7 +116,7 @@
 .bmk-plate img { width: min(240px, 60%); opacity: 0.30; position: relative; z-index: 1; }
 .bmk-plate span {
   position: relative; z-index: 1; color: var(--text2);
-  font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; text-align: center;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; text-align: center;
 }
 
 /* ---- hero ---- */
@@ -147,7 +151,7 @@
 .bmk-btn {
   display: inline-flex; align-items: center; gap: 10px;
   background: transparent; border: 1px solid var(--accent); color: var(--text);
-  font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+  font-family: var(--mono); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
   padding: 15px 26px; cursor: pointer; transition: background 0.3s, color 0.3s, border-color 0.3s;
   text-decoration: none;
 }
@@ -162,7 +166,7 @@
 .bmk-story-row.flip { grid-template-columns: 1.1fr 0.9fr; }
 .bmk-story-row.flip .bmk-media { order: 2; }
 .bmk-story-row p { font-size: 17px; line-height: 1.75; color: var(--text2); }
-.bmk-story-row .num { font-family: 'IBM Plex Mono', monospace; color: var(--accent); font-size: 12px; margin-bottom: 14px; display: block; letter-spacing: 0.08em; text-transform: uppercase; }
+.bmk-story-row .num { font-family: var(--mono); color: var(--accent); font-size: 12px; margin-bottom: 14px; display: block; letter-spacing: 0.08em; text-transform: uppercase; }
 .bmk-media { height: 360px; }
 
 /* ---- cards ---- */
@@ -171,7 +175,7 @@
 .bmk-card:hover { background: var(--panel); }
 .bmk-card h3 { font-size: 22px; font-weight: 400; margin: 18px 0 14px; }
 .bmk-card p { color: var(--text2); font-size: 14.5px; line-height: 1.65; }
-.bmk-card .idx { color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+.bmk-card .idx { color: var(--accent); font-family: var(--mono); font-size: 12px; }
 
 /* ---- work grid ---- */
 .bmk-work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; margin-top: 50px; }
@@ -188,14 +192,14 @@
 
 /* ---- approach ---- */
 .bmk-approach-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 56px; }
-.bmk-approach-grid .step .n { font-family: 'IBM Plex Mono', monospace; color: var(--accent); font-size: 13px; margin-bottom: 16px; display: block; }
+.bmk-approach-grid .step .n { font-family: var(--mono); color: var(--accent); font-size: 13px; margin-bottom: 16px; display: block; }
 .bmk-approach-grid .step h4 { font-size: 18px; font-weight: 400; margin: 0 0 12px; }
 .bmk-approach-grid .step p { color: var(--text2); font-size: 14px; line-height: 1.65; }
 
 /* ---- quote panel ---- */
 .bmk-quote-panel { border: 1px solid var(--hair); background: var(--panel); padding: 52px 56px; }
 .bmk-quote-panel p { font-family: 'Fraunces', serif; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.5; font-style: italic; color: var(--text); margin: 0; }
-.bmk-rhythm { font-family: 'IBM Plex Mono', monospace; color: var(--accent); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 22px; }
+.bmk-rhythm { font-family: var(--mono); color: var(--accent); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 22px; }
 
 /* ---- case studies ---- */
 .bmk-case { padding: 88px 5vw; max-width: 1000px; margin: 0 auto; border-bottom: 1px solid var(--hair); }
@@ -204,15 +208,25 @@
 .bmk-case h2 { font-size: clamp(28px, 3.4vw, 44px); font-weight: 400; margin: 0 0 32px; line-height: 1.15; }
 .bmk-case .bmk-media { height: 340px; margin-bottom: 40px; }
 .bmk-case .body-grid { display: grid; grid-template-columns: 200px 1fr; gap: 50px; }
-.bmk-case .body-grid .label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.1em; padding-top: 4px; }
+.bmk-case .body-grid .label { font-family: var(--mono); font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.1em; padding-top: 4px; }
 .bmk-case .body-grid p { font-size: 16.5px; line-height: 1.85; color: var(--text2); margin: 0 0 20px; }
 .bmk-case .body-grid p strong { color: var(--text); font-weight: 500; }
 .bmk-case .built {
   margin-top: 28px; padding: 18px 22px; border-left: 2px solid var(--accent2);
   background: rgba(176,141,87,0.04);
 }
-.bmk-case .built .k { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; }
+.bmk-case .built .k { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; }
 .bmk-case .built p { font-size: 14.5px; line-height: 1.7; margin: 0; }
+
+.bmk-case-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+.bmk-case-gallery .bmk-media { height: 240px; }
+
+/* Attribution / confidentiality line closing each case. */
+.bmk-case .case-note {
+  margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--hair);
+  font-family: var(--mono); font-size: 11.5px; line-height: 1.9;
+  letter-spacing: 0.04em; color: var(--text2);
+}
 
 /* ---- about ---- */
 .bmk-about-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; padding: 110px 5vw 90px; max-width: 1280px; margin: 0 auto; }
@@ -231,7 +245,7 @@
 .bmk-note:hover { border-color: var(--accent2); }
 .bmk-note h3 { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; font-size: 22px; color: var(--text); margin: 0 0 16px; line-height: 1.35; }
 .bmk-note p { color: var(--text2); font-size: 15px; line-height: 1.75; margin: 0; }
-.bmk-note .n { font-family: 'IBM Plex Mono', monospace; color: var(--accent); font-size: 11px; display: block; margin-bottom: 18px; }
+.bmk-note .n { font-family: var(--mono); color: var(--accent); font-size: 11px; display: block; margin-bottom: 18px; }
 
 /* ---- services ---- */
 .bmk-services { margin-top: 50px; border-top: 1px solid var(--hair); }
@@ -239,10 +253,10 @@
   display: grid; grid-template-columns: 56px 1fr 260px; gap: 40px; align-items: start;
   padding: 44px 0; border-bottom: 1px solid var(--hair);
 }
-.bmk-service .n { font-family: 'IBM Plex Mono', monospace; color: var(--accent); font-size: 13px; padding-top: 6px; }
+.bmk-service .n { font-family: var(--mono); color: var(--accent); font-size: 13px; padding-top: 6px; }
 .bmk-service h3 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 26px; margin: 0 0 12px; }
 .bmk-service p { color: var(--text2); font-size: 15.5px; line-height: 1.75; margin: 0; }
-.bmk-service .meta { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text2); letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.9; padding-top: 8px; }
+.bmk-service .meta { font-family: var(--mono); font-size: 11px; color: var(--text2); letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.9; padding-top: 8px; }
 
 /* ---- contact ---- */
 .bmk-contact { min-height: 66vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 5vw; }
@@ -264,7 +278,7 @@
 .bmk-footer .final { color: var(--text); font-size: 17px; margin-top: 30px; font-family: 'Fraunces', serif; font-style: italic; }
 .bmk-footer .bottom-row {
   display: flex; align-items: center; justify-content: space-between; margin-top: 66px; padding-top: 26px;
-  border-top: 1px solid var(--hair); font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: var(--text2);
+  border-top: 1px solid var(--hair); font-family: var(--mono); font-size: 11.5px; color: var(--text2);
   flex-wrap: wrap; gap: 14px;
 }
 .bmk-footer .bottom-row a { color: var(--text2); text-decoration: none; }
@@ -281,6 +295,7 @@
 
 .bmk[lang="ar"] {
   font-family: 'IBM Plex Sans Arabic', sans-serif;
+  --mono: 'IBM Plex Sans Arabic', sans-serif;
 }
 .bmk[lang="ar"] .serif,
 .bmk[lang="ar"] h1,
@@ -291,27 +306,25 @@
 }
 
 /* Arabic is cursive: letters must join. letter-spacing severs them into
- * unreadable fragments, and there is no uppercase to transform to. Both have to
- * be neutralised everywhere the Latin design relies on them. */
-.bmk[lang="ar"] .mono,
-.bmk[lang="ar"] .bmk-link,
-.bmk[lang="ar"] .bmk-btn,
-.bmk[lang="ar"] .bmk-eyebrow,
-.bmk[lang="ar"] .num,
-.bmk[lang="ar"] .idx,
-.bmk[lang="ar"] .tag,
-.bmk[lang="ar"] .n,
-.bmk[lang="ar"] .k,
-.bmk[lang="ar"] .label,
-.bmk[lang="ar"] .meta,
-.bmk[lang="ar"] .bmk-rhythm,
-.bmk[lang="ar"] .bmk-fig figcaption,
-.bmk[lang="ar"] .bmk-plate span,
-.bmk[lang="ar"] .bottom-row,
-.bmk[lang="ar"] .field .mono {
-  font-family: 'IBM Plex Sans Arabic', sans-serif;
-  letter-spacing: normal;
-  text-transform: none;
+ * unreadable fragments, and there is no uppercase to transform to.
+ *
+ * This is deliberately a blanket rule rather than a list of classes. An earlier
+ * version enumerated every label class, and the first new class added after that
+ * (.case-note) silently shipped broken Arabic. Nothing in Arabic ever wants
+ * letter-spacing, so the safe default is to kill it everywhere. Latin labels keep
+ * their spacing because this only applies under [lang="ar"].
+ *
+ * The Arabic font arrives separately: every 'IBM Plex Mono' stack lists
+ * 'IBM Plex Sans Arabic' after it, and since Plex Mono has no Arabic glyphs the
+ * browser falls through to it per character. Latin stays mono, Arabic does not.
+ *
+ * !important is deliberate: multi-class rules like `.bmk-case .body-grid .label`
+ * outrank a plain blanket selector, and this is a correctness invariant rather
+ * than a style preference, so it has to win unconditionally. */
+.bmk[lang="ar"],
+.bmk[lang="ar"] * {
+  letter-spacing: normal !important;
+  text-transform: none !important;
 }
 
 /* Amiri sits smaller on the line than Fraunces; nudge display sizes up. */
@@ -369,6 +382,7 @@
   .bmk-case { padding: 64px 5vw; }
   .bmk-case .body-grid { grid-template-columns: 1fr; gap: 16px; }
   .bmk-case .bmk-media { height: 240px; }
+  .bmk-case-gallery { grid-template-columns: 1fr; gap: 16px; }
   .bmk-about-hero { grid-template-columns: 1fr; padding-top: 80px; gap: 40px; }
   .bmk-about-hero .bmk-media { height: 400px; }
   .bmk-values { grid-template-columns: 1fr; }

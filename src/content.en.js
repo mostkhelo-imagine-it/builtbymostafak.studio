@@ -58,7 +58,7 @@ export const workPage = {
   eyebrow: "Inside the Work",
   title: "Every project carries a moment of clarity",
   intro:
-    "These are documentation, not a showcase. Told truthfully and without client names. Some stories are still in motion, others complete, but all of them are alive.",
+    "These are documentation, not a showcase. Some are named with permission, others stay anonymous. Some are still in motion, others complete, but all of them are alive.",
   closing: "Every story begins the same way: listening, shaping, revealing, growing.",
   builtLabel: "What I built",
 };
@@ -156,7 +156,7 @@ export const meta = {
   "/work": {
     title: "Inside the Work | builtbymostafaK©",
     description:
-      "Seven stories about the moment an idea becomes real. Told truthfully and without client names.",
+      "Stories about the moment an idea becomes real, from a 5.7M sqm Red Sea development to work that stays private.",
   },
   "/services": {
     title: "Work With Me | builtbymostafaK©",
@@ -217,8 +217,28 @@ export const approach = [
   },
 ];
 
-/* Case studies, told without client names, per the studio's confidentiality rule. */
+/* Case studies. Named only where the client gave permission; anonymous otherwise. */
 export const cases = [
+  {
+    slug: "land-to-vision",
+    tag: "From Land to Vision",
+    title: "Building the partnership model behind a 5.7M sqm Red Sea development",
+    label: "Entities & Foundations",
+    image: { src: "/assets/land-discussion.jpg", caption: "On site at Oriental Coast, Marsa Alam" },
+    gallery: [
+      { src: "/assets/land-walk.jpg", caption: "Walking the coastline" },
+      { src: "/assets/evening-session.jpg", caption: "Evening session on site" },
+    ],
+    teaser:
+      "The land had obvious value, but that alone doesn't close a deal. Other developers were already making offers, and most of those offers weren't built around what actually benefited the landowning family.",
+    body: [
+      "Red Sea Sharm for Touristic Development, a subsidiary of OUD, owns Oriental Coast. It's a large mixed-use development in Marsa Alam: hotels, villas, and residential compounds spread across more than seven kilometers of Red Sea coastline. The land had obvious value, but that alone doesn't close a deal. Other developers were already making offers, and most of those offers weren't built around what actually benefited the landowning family.",
+      "Both sides of the deal brought me in. I met with the consulting parties representing the owning family and business, and separately with the investors. **My job wasn't to take one side. It was to sit in the middle and build something both sides could actually agree on:** a partnership model and a full investor deck that made the value, the terms, and the future of the land clear to everyone involved.",
+      "That meant a lot of listening before any writing. I had to understand what each side actually cared about: land value, control, risk, upside. Then I shaped a structure and a story around that, so it wasn't just numbers on a page, it was something people could look at and understand what they were agreeing to.",
+      "The deck and the partnership model I built became the foundation the deal moved forward on. Once that was in place, my part was done. What happens on-site now, the construction and development, is a different team's work. Mine was getting the deal to a real \"yes.\"",
+    ],
+    note: "Oriental Coast, Marsa Alam. Still an ongoing project. Ownership named with permission, investor side kept confidential.",
+  },
   {
     slug: "craftsmans-transition",
     tag: "The Craftsman's Transition",
@@ -269,27 +289,6 @@ export const cases = [
     ],
     built:
       "Brand architecture, service design, internal communication structure, and complete visual identity and tone of voice system.",
-  },
-  {
-    slug: "coastal-project",
-    tag: "The Coastal Project",
-    title: "Belonging by the sea",
-    label: "Entities & Foundations",
-    image: { src: "/assets/land-discussion.jpg", caption: "On site, reading the land before the story" },
-    gallery: [
-      { src: "/assets/land-walk.jpg", caption: "Walking the coastline" },
-      { src: "/assets/evening-session.jpg", caption: "Evening session on site" },
-    ],
-    teaser:
-      "A destination with scale but no clarity. Every department speaking a different language, the place itself with no voice.",
-    body: [
-      "A destination that existed for years, with hundreds of rooms, villas, and history, yet no coherent story. It had scale but no clarity. Each department spoke a different language: sales talked about offers, marketing about beaches, management about investors. The place itself had no voice.",
-      "My work began from the ground, literally. I visited the location, studied the land, walked its coastline, and listened. What I found was that its power wasn't in luxury or activity. **It was in belonging. People didn't come for entertainment; they came to slow down, reconnect, and breathe.**",
-      "We rebuilt its brand narrative around that truth. \"Belonging by the Sea\" became the foundation for a new tone: grounded, calm, timeless. I designed a full brand manual, communication plan, digital domain, and content system ready for internal deployment.",
-      "The project awaits its management-level launch, but its new structure is complete. It now stands as a story of stillness, not selling: a place that finally knows what it is.",
-    ],
-    built:
-      "Narrative system, brand manual, digital strategy, domain and communication architecture, and identity rollout plan.",
   },
   {
     slug: "educational-institution",
