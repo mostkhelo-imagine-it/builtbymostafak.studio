@@ -40,6 +40,38 @@ export default function Services() {
       </div>
 
       <Reveal>
+        <div
+          style={{
+            marginTop: 64,
+            padding: "36px 32px",
+            border: "1px solid var(--accent)",
+            borderRadius: 14,
+            background: "rgba(176,141,87,0.05)",
+          }}
+        >
+          <span className="mono bmk-eyebrow" style={{ marginBottom: 12 }}>
+            {p.snapshot.tag}
+          </span>
+          <h3 className="serif" style={{ fontSize: "clamp(24px,3.2vw,32px)", margin: "0 0 14px" }}>
+            {p.snapshot.title}
+          </h3>
+          <p style={{ color: "var(--text2)", maxWidth: 620, lineHeight: 1.8, fontSize: 16 }}>
+            {p.snapshot.copy}
+          </p>
+          <p style={{ marginTop: 14, fontSize: 15, color: "var(--text)" }}>{p.snapshot.price}</p>
+          <a
+            className="bmk-btn"
+            href={p.toolUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginTop: 22, display: "inline-block" }}
+          >
+            {p.snapshot.cta}
+          </a>
+        </div>
+      </Reveal>
+
+      <Reveal>
         <div style={{ marginTop: 50 }}>
           <Link className="bmk-btn" to={href("/contact")}>
             {p.cta}

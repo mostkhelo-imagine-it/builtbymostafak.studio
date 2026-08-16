@@ -78,6 +78,15 @@ export const servicesPage = {
   intro:
     "Some come at the beginning of an idea, others when things need to evolve. My role is to bring clarity, story, and structure to what you're creating.",
   cta: "Send Project Brief",
+  toolUrl: "https://clarity.builtbymostafak.studio",
+  snapshot: {
+    tag: "New · Begin on your own",
+    title: "The Clarity Snapshot",
+    copy:
+      "Not ready for the full work yet? Start here. One private, guided conversation that draws out your essence, your core truth, and the single line that finally makes people say “now I see it.” Yours the same day.",
+    price: "Pay what feels right, from $10.",
+    cta: "Begin your Clarity Snapshot",
+  },
 };
 
 export const about = {
