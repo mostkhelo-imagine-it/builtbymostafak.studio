@@ -258,6 +258,19 @@
 .bmk-service p { color: var(--text2); font-size: 15.5px; line-height: 1.75; margin: 0; }
 .bmk-service .meta { font-family: var(--mono); font-size: 11px; color: var(--text2); letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.9; padding-top: 8px; }
 
+/* ---- clarity snapshot (links out to the tool subdomain) ---- */
+.bmk-snapshot {
+  padding: 36px 32px;
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+  background: rgba(176,141,87,0.05);
+}
+.bmk-snapshot.spaced { margin-top: 64px; }
+.bmk-snapshot h3 { font-size: clamp(24px, 3.2vw, 32px); font-weight: 400; margin: 0 0 14px; }
+.bmk-snapshot .copy { color: var(--text2); max-width: 620px; line-height: 1.8; font-size: 16px; margin: 0; }
+.bmk-snapshot .price { margin: 14px 0 0; font-size: 15px; color: var(--text); }
+.bmk-snapshot .bmk-btn { margin-top: 22px; }
+
 /* ---- contact ---- */
 .bmk-contact { min-height: 66vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 5vw; }
 .bmk-contact h1 { font-size: clamp(32px, 5vw, 58px); font-weight: 400; max-width: 800px; line-height: 1.25; margin: 0 0 30px; }

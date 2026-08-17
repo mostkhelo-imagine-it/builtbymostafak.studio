@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
 import Media from "../components/Media";
+import SnapshotCard from "../components/SnapshotCard";
 import { useLocale } from "../i18n";
 
 export default function Home() {
@@ -83,6 +84,12 @@ export default function Home() {
             </Reveal>
           ))}
         </div>
+
+        <SnapshotCard
+          snapshot={t.servicesPage.snapshot}
+          toolUrl={t.servicesPage.toolUrl}
+          className="spaced"
+        />
       </section>
 
       <hr className="bmk-hr" />

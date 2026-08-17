@@ -12,10 +12,18 @@ export default function Footer() {
       <p>{f.body}</p>
       <p className="signoff">{f.signoff}</p>
       <p className="final">{f.final}</p>
-      <div style={{ marginTop: 40 }}>
+      <div className="bmk-btn-row" style={{ marginTop: 40, justifyContent: "center" }}>
         <Link className="bmk-btn" to={href("/contact")}>
           {f.cta}
         </Link>
+        <a
+          className="bmk-btn ghost"
+          href={t.servicesPage.toolUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t.servicesPage.snapshot.cta}
+        </a>
       </div>
       <div className="bottom-row">
         <span>{f.rights}</span>
