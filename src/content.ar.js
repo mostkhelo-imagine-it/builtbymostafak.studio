@@ -282,7 +282,7 @@ export const servicesPage = {
   intro:
     "بعضهم يأتي في بداية الفكرة، وبعضهم حين تحتاج الأمور أن تتطوّر. ودوري أن أجلب الوضوح والحكاية والبنية لما تبنيه.",
   cta: "أرسل ملخص المشروع",
-  toolUrl: "https://clarity.builtbymostafak.studio",
+  toolUrl: "https://clarity.builtbymostafak.studio/ar",
   snapshot: {
     tag: "جديد · ابدأ بنفسك",
     title: "لمحة الوضوح",
