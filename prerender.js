@@ -4,7 +4,7 @@ import * as en from "./src/content.en.js";
 import * as ar from "./src/content.ar.js";
 
 const SITE_URL = "https://builtbymostafak.studio";
-const PATHS = ["/", "/work", "/services", "/notes", "/about", "/contact"];
+const PATHS = ["/", "/work", "/services", "/notes", "/about", "/contact", "/terms", "/privacy", "/refund"];
 const BUNDLES = { en, ar };
 
 const href = (locale, path) => {

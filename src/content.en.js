@@ -148,12 +148,167 @@ export const footer = {
   cta: "Send Project Brief",
   rights: "© 2026 builtbymostafaK© Creative Studio. Clarity. Story. Structure.",
   privacy: "No cookies. No tracking. Only clarity.",
+  legal: { terms: "Terms", privacy: "Privacy", refund: "Refund" },
 };
 
 export const notFound = {
   title: "This page hasn't been shaped yet.",
   body: "The link you followed doesn't lead anywhere, but the work does.",
   cta: "Back to the studio",
+};
+
+/* Site-wide policies. Adapted from the Clarity Snapshot's own policy pages so the
+ * two read as one studio. Scope differs: nothing is sold on this site directly,
+ * so payment and refund terms defer to the tool, which is where money changes
+ * hands. Links use [label](/path) and resolve inside the current language. */
+export const policies = {
+  terms: {
+    eyebrow: "Legal",
+    title: "Terms of Service",
+    updated: "Last updated: 17 August 2026",
+    intro:
+      "These terms govern your use of builtbymostafak.studio (the \"Site\"), operated by Mostafa Khalil, sole proprietor, trading as builtbymostafaK© Creative Studio (\"the Studio,\" \"we,\" \"us\"), based in Egypt. By using the Site you agree to these terms.",
+    sections: [
+      {
+        h: "The Site",
+        body: [
+          "This Site presents the Studio's work, approach, and services. It is informational. Engagements such as Clarity Sessions, Brand and Story Architecture, and Creative Direction are arranged individually and governed by the written agreement made for that engagement, not by this Site.",
+          "The Clarity Snapshot is a separate paid tool hosted at clarity.builtbymostafak.studio and carries its own terms, privacy, and refund policies, which apply to any purchase made there.",
+        ],
+      },
+      {
+        h: "Case studies and confidentiality",
+        body: [
+          "Work shown here is published either with the client's permission or anonymised. Where a client is named, that naming is by permission. Where a project is described without names, identifying details have been withheld deliberately, and no inference should be drawn about the parties involved.",
+        ],
+      },
+      {
+        h: "Intellectual property",
+        body: [
+          "The Site's content, including its writing, photography, design, method, name, and the builtbymostafaK© brand, remains the property of the Studio and may not be copied, republished, or reused without permission.",
+        ],
+      },
+      {
+        h: "Acceptable use",
+        body: [
+          "You agree to use the Site lawfully, and not to attempt to disrupt, overload, or gain unauthorised access to it, or to scrape or republish its contents at scale.",
+        ],
+      },
+      {
+        h: "Availability and liability",
+        body: [
+          "The Site is provided \"as is,\" without warranties of any kind. We do not guarantee uninterrupted availability. Nothing on this Site is legal, financial, investment, or other professional advice. To the fullest extent permitted by law, the Studio's liability arising from your use of the Site is limited to the amount you paid to access it, which is nothing.",
+        ],
+      },
+      {
+        h: "Changes",
+        body: ["We may update these terms. The current version is always posted here, with the date above."],
+      },
+      {
+        h: "Governing law",
+        body: [
+          "These terms are governed by the laws of the Arab Republic of Egypt, without regard to conflict-of-law rules.",
+        ],
+      },
+      {
+        h: "Business identity",
+        body: [
+          "This Site is operated by Mostafa Khalil, sole proprietor, trading as builtbymostafaK© Creative Studio, Egypt. Purchases of the Clarity Snapshot are sold and processed by Paddle.com Market Ltd as merchant of record.",
+        ],
+      },
+    ],
+    related: "See also our [Privacy Policy](/privacy) and [Refund Policy](/refund).",
+    contactLabel: "Questions about these terms:",
+  },
+
+  privacy: {
+    eyebrow: "Legal",
+    title: "Privacy Policy",
+    updated: "Last updated: 17 August 2026",
+    intro:
+      "This Site is operated by Mostafa Khalil, sole proprietor, trading as builtbymostafaK© Creative Studio (\"we,\" \"us\"), based in Egypt. This policy explains what we collect and how we handle it. We keep this deliberately minimal, because the studio runs on trust.",
+    sections: [
+      {
+        h: "What this Site collects",
+        body: [
+          "Nothing. This Site sets no cookies, runs no analytics, and uses no third-party tracking or advertising. There is no login, no form, and no newsletter signup. We do not build a profile of you, and we cannot identify you from a visit.",
+          "The Site is hosted by GitHub Pages, which may process standard server request data such as IP address for delivery and security. We do not have access to it as an identifiable record.",
+        ],
+      },
+      {
+        h: "When you email us",
+        body: [
+          "If you write to us, we hold your message and address for as long as needed to correspond with you and to keep a record of the engagement. We do not add you to any mailing list, and we do not share your message.",
+        ],
+      },
+      {
+        h: "What you share in an engagement",
+        body: [
+          "Clients trust us with ideas at their earliest stage. Anything shared in the course of an engagement is treated as confidential and is not published, quoted, or shown to anyone else without permission.",
+        ],
+      },
+      {
+        h: "The Clarity Snapshot",
+        body: [
+          "The Clarity Snapshot is a separate tool at clarity.builtbymostafak.studio with its own privacy policy, because it involves a payment processor and an AI provider. If you use it, that policy applies to that session.",
+        ],
+      },
+      {
+        h: "Your choices",
+        body: [
+          "You can contact us at any time to ask what we hold or to raise a concern. Because this Site collects nothing, there is generally nothing for us to retrieve or delete, but we will help with any request about correspondence.",
+        ],
+      },
+      {
+        h: "Children",
+        body: ["This Site is intended for adults and is not directed to anyone under 18."],
+      },
+      {
+        h: "Changes",
+        body: ["We may update this policy; the current version is always posted here with the date above."],
+      },
+    ],
+    related: "See also our [Terms of Service](/terms) and [Refund Policy](/refund).",
+    contactLabel: "Privacy questions:",
+  },
+
+  refund: {
+    eyebrow: "Legal",
+    title: "Refund Policy",
+    updated: "Last updated: 17 August 2026",
+    intro:
+      "Nothing is sold on this Site directly. This policy covers the Clarity Snapshot, our paid digital tool, and explains how payment works for studio engagements.",
+    sections: [
+      {
+        h: "The Clarity Snapshot",
+        body: [
+          "The Clarity Snapshot is a digital service delivered instantly. We want you to feel it was worth it, and we stand behind it. If you complete a session and feel it genuinely did not help you, contact us within 14 days of purchase and we will arrange a full refund. No long forms, no interrogation.",
+          "Purchases are handled by Paddle.com, our merchant of record. Refunds are issued back to your original payment method through Paddle, typically within a few business days once approved. You can request a refund either by emailing us or by using the link on your Paddle receipt.",
+        ],
+      },
+      {
+        h: "Technical problems",
+        body: [
+          "If a technical fault prevented you from completing a session, whether the chat did not load, the session ended early, or you were charged twice, contact us and we will either restore your access or refund you promptly.",
+        ],
+      },
+      {
+        h: "Fair use",
+        body: [
+          "Because the value is delivered the moment you complete a session, we may decline repeated refund requests from the same person where the service was fully used and no fault occurred. This keeps the promise honest for everyone.",
+        ],
+      },
+      {
+        h: "Studio engagements",
+        body: [
+          "Clarity Sessions, Brand and Story Architecture, and Creative Direction are arranged individually. Payment terms, milestones, and any cancellation arrangement are set out in the written agreement for that engagement, and this policy does not override it.",
+        ],
+      },
+    ],
+    related: "See also our [Terms of Service](/terms) and [Privacy Policy](/privacy).",
+    contactLabel: "Refund requests:",
+    contactNote: "Include the email you used at checkout so we can find your order.",
+  },
 };
 
 export const meta = {
@@ -182,6 +337,18 @@ export const meta = {
   "/contact": {
     title: "Contact | builtbymostafaK©",
     description: "If you're building something real, I'm ready when you are.",
+  },
+  "/terms": {
+    title: "Terms of Service | builtbymostafaK©",
+    description: "Terms governing use of builtbymostafak.studio, operated by builtbymostafaK© Creative Studio, Egypt.",
+  },
+  "/privacy": {
+    title: "Privacy Policy | builtbymostafaK©",
+    description: "No cookies, no analytics, no tracking. What this site collects and how correspondence is handled.",
+  },
+  "/refund": {
+    title: "Refund Policy | builtbymostafaK©",
+    description: "The 14-day satisfaction promise for the Clarity Snapshot, and how payment works for studio engagements.",
   },
 };
 

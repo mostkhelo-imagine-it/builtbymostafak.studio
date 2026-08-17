@@ -9,7 +9,7 @@ export const DEFAULT_LOCALE = "en";
 const bundles = { en, ar };
 
 /* The routes each locale serves, minus the /ar prefix. */
-export const PATHS = ["/", "/work", "/services", "/notes", "/about", "/contact"];
+export const PATHS = ["/", "/work", "/services", "/notes", "/about", "/contact", "/terms", "/privacy", "/refund"];
 
 /** Splits a full pathname into its locale and the locale-free path. */
 export function parsePath(pathname) {

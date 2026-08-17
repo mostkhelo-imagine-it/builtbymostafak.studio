@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import Notes from "./pages/Notes";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Policy from "./pages/Policy";
 import { useLocale, parsePath, getBundle, localeHref, canonicalUrl, PATHS } from "./i18n";
 
 function NotFound() {
@@ -110,6 +111,9 @@ const PAGES = {
   "/notes": Notes,
   "/about": About,
   "/contact": Contact,
+  "/terms": () => <Policy which="terms" />,
+  "/privacy": () => <Policy which="privacy" />,
+  "/refund": () => <Policy which="refund" />,
 };
 
 export default function App() {

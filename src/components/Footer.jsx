@@ -25,6 +25,12 @@ export default function Footer() {
           {t.servicesPage.snapshot.cta}
         </a>
       </div>
+      <div className="legal-row">
+        <Link to={href("/terms")}>{f.legal.terms}</Link>
+        <Link to={href("/privacy")}>{f.legal.privacy}</Link>
+        <Link to={href("/refund")}>{f.legal.refund}</Link>
+      </div>
+
       <div className="bottom-row">
         <span>{f.rights}</span>
         <span>{f.privacy}</span>
