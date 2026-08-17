@@ -371,8 +371,10 @@
     radial-gradient(ellipse 80% 60% at 70% 0%, rgba(176,141,87,0.14), transparent 60%),
     linear-gradient(180deg, rgba(11,11,10,0.86) 0%, rgba(11,11,10,0.96) 70%, #0B0B0A 100%);
 }
-.bmk[dir="rtl"] .bmk-story-row { grid-template-columns: 1.1fr 0.9fr; }
-.bmk[dir="rtl"] .bmk-story-row.flip { grid-template-columns: 0.9fr 1.1fr; }
+/* Story rows need no column override in RTL. CSS Grid already places the first
+ * column on the right, so the layout mirrors on its own. Restating the widths
+ * here mirrored them a second time, which handed the image the wide column and
+ * the text the narrow one, inverting the proportions against the English. */
 
 /* The language switch reads as an action, not a section. */
 .bmk-lang {

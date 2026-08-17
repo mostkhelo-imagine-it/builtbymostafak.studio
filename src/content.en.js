@@ -1,4 +1,4 @@
-export const EMAIL = "step@builtbymostafak.studio";
+export const EMAIL = "stepin@builtbymostafak.studio";
 
 export const ui = {
   nav: {
