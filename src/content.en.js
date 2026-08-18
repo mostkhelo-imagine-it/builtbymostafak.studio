@@ -83,8 +83,8 @@ export const servicesPage = {
     tag: "New · Begin on your own",
     title: "The Clarity Snapshot",
     copy:
-      "Not ready for the full work yet? Start here. One private, guided conversation that draws out your essence, your core truth, and the single line that finally makes people say “now I see it.” Yours the same day.",
-    price: "Pay what feels right, from $10.",
+      "Not ready for the full work yet? Start here. The Clarity Snapshot is an automated AI tool I designed: a private, guided brainstorm that breaks your idea down and delivers a written conclusion, your essence, your core truth, and the single line that finally makes people say “now I see it.” Generated instantly, no human in the session.",
+    price: "US$15, one-time purchase.",
     cta: "Begin your Clarity Snapshot",
   },
 };
