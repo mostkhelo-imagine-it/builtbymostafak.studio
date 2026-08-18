@@ -417,20 +417,22 @@ export const cases = [
   },
   {
     slug: "craftsmans-transition",
-    tag: "The Craftsman's Transition",
+    tag: "From Craft to Message",
     title: "Discipline as a form of self-respect",
     label: "Talents & Creators",
     image: null,
     teaser:
-      "He had mastered his craft and outgrown his old identity, but didn't know how to speak from the new place he had reached.",
+      "A barber who had mastered his craft, a clinic that carried the same conviction, and nowhere that joined form and substance. So we built the house that does.",
     body: [
-      "When he first reached out, he didn't come asking for a logo or campaign. He came with a quiet frustration. He had mastered his craft, built loyal clients, and trained young barbers, but his public image still belonged to an earlier version of himself. He had outgrown the small shop identity, yet didn't know how to speak from the new place he had reached.",
-      "Our first sessions had nothing to do with visuals. We spoke about class, language, dignity, and how craftsmen are often undervalued when their presentation doesn't match the level of their work. Through these conversations, it became clear that **his story wasn't about beauty or grooming. It was about discipline as a form of self-respect.**",
-      "From there, I restructured his entire brand architecture: renaming his space, reframing his messaging, and designing a system that could hold both his teaching practice and his legacy as a craftsman. We built an academy identity, a student-facing communication style, and a foundation for future educational programs. The design language became clean, masculine, and minimal, closer to a craft school than a lifestyle brand.",
-      "The work is still expanding. The new visuals are in early rollout, but the deeper result has already happened: he now speaks about his work with the same precision he applies to his scissors.",
+      "When Dr. Reda first reached out, he didn't come asking for a logo or a campaign. He came with a quiet frustration. He had mastered his craft, built loyal clients, and trained young barbers, but everything around him taught the trade without the person: courses that produce workers, not confident human beings, and no single place that joined form and substance.",
+      "Our first sessions had nothing to do with visuals. We sat with him and with his wife, whose skincare clinic carried the same conviction from the other side, and listened to their journey, their language, and their dreams. Two sentences surfaced that said everything. His: \"I don't teach you a trade. I teach you to respect your work and to serve people with it.\" Hers: \"Caring for your skin is not a luxury. It is respect for yourself.\" **The story was never about grooming. It was about discipline as a form of self-respect, and it belonged to two people, not one.**",
+      "So the structure became a house with two rooms. Memo Academy, where Reda teaches craft and discipline, in black, wood, and a copper accent. Memo Clinic, where his wife teaches style and self-care, in white, sand, and soft pink. One name holds them together: the House of Craft and Confidence. From identity extraction sessions we defined each entity's core message and tone of voice, wrote three short scripts in their own spoken words, and spent a full day filming the real thing: training, tools, honest conversations, portraits of the two of them, and a mini documentary called \"These people teach us how to live.\"",
+      "The foundation closed with six opening posts, a launch week, a reusable content template, and a language guide, down to the fixed line Reda ends every video with, so the voice survives long after the launch. The road ahead runs in four phases across eighteen months, from this foundation through course launches and digital expansion to franchise readiness. **We are not building a brand. We are building a house with impact.**",
+      "The rollout is young, but the deeper result has already happened: he now speaks about his work with the same precision he applies to his scissors.",
     ],
     built:
-      "Brand strategy, narrative structure, visual identity system, academy naming, communication manual, and long-term mentorship framework.",
+      "Identity extraction sessions with the founders, core message and tone of voice per entity, scripts in their own words, a full photo and film day, complete visual identities for academy and clinic, six opening posts with a launch plan, a reusable content template, a language guide, and a four-phase eighteen-month roadmap.",
+    note: "Memo Academy and Memo Clinic, Egypt. Phase one delivered; the road to courses, digital expansion, and franchise readiness is under way. Named with permission.",
   },
   {
     slug: "companions-framework",
