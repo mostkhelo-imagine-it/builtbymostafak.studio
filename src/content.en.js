@@ -453,20 +453,22 @@ export const cases = [
   },
   {
     slug: "legal-collective",
-    tag: "The Legal Collective",
-    title: "People don't want a firm, they want someone who connects the dots",
+    tag: "From First Paper to Last Stamp",
+    title: "People don't want a firm, they want one point of contact",
     label: "Entities & Foundations",
     image: null,
     teaser:
-      "Exceptional expertise in law, taxation, and mediation, described in language so institutional it kept people at a distance.",
+      "Cassation lawyers, former police generals, an MP with a doctorate in international law, tax names trusted since the nineties. Formidable one by one, and no shared language between them.",
     body: [
-      "A multidisciplinary team came to me when they were stuck between old professional norms and a new social reality. They offered exceptional expertise in law, taxation, and mediation, but their language made them sound distant and bureaucratic. They were solving human problems, yet speaking in cold institutional vocabulary.",
-      "We began by mapping their internal workflow, identifying how people actually found them, and where misunderstanding happened. The insight was simple: **people don't want a firm, they want someone who can connect the dots for them.**",
-      "From there, I reframed their entire positioning. They became a connector, not just a provider: a hub that links clients to clarity through specialized partners. I built their narrative, service structure, and visual identity around that idea. The brand now feels trustworthy and human, with a muted palette and concise, empathetic tone.",
-      "Launch is ongoing, but internally the shift has already happened. Their team now communicates with consistency and confidence.",
+      "When Mongez came to me, the expertise was never the question. Around the table sat cassation lawyers, former police brigadiers, a member of parliament with a doctorate in international law, and tax authorities whose names had carried weight since the nineties. What was missing was one voice. Their own first document said it plainly: two competing \"who we are\" paragraphs sitting side by side, with \"or we could say\" written between them, and five candidate slogans waiting for someone to decide.",
+      "We started where the files start: with how people actually reach them, and why the simplest file can stall for years. The answer was never a lack of expertise. It was fragmentation, a person bouncing between bodies with no one following the thread. **People don't want a firm. They want one point of contact.** That sentence became the spine of everything, and their final profile now opens with it in their own words: the single point of contact that gathers law, procedure, tax, formation, and follow-up under one roof, with full responsibility.",
+      "From there I built the language of the house. A mission recentred from advice to completion, in their words: \"we don't only advise, we finish what we started.\" A slogan chosen from the five: \"Mongez, because time and law are golden.\" A tone of voice defined in one line: dignity and confidence without condescension. Founder narratives written as people rather than resumes, the counsel as the maker of the silent equation, the brigadier for whom Mongez was not a company but a life's project. Then the architecture under it: seven service areas, and a work model that treats every file as a project, received in full, explained clearly, planned, followed step by step, and reported.",
+      "The profile itself was built the way their files are: patiently, in versions, across five months to its final edition in November 2025, with the name settled, the logo, the deck, and the number that makes the promise credible, a network of more than 500 lawyers and specialists across Egypt's governorates behind the front-line names. Their procedural promise, kept in their own words: one entity that coordinates with every authority for you, from the first paper to the last stamp.",
+      "The launch continues, but the shift already happened where it matters. A team that once had two answers to \"who are we\" now has one, and their clients say it more simply than any profile could. In one investor's words: \"I'm at ease as long as Mongez is holding my file.\" **At Mongez, the solution is completed.**",
     ],
     built:
-      "Brand architecture, service design, internal communication structure, and complete visual identity and tone of voice system.",
+      "Positioning built on the single point of contact, mission and values, slogan and tone of voice, founder and partner narratives, a seven-area service architecture, a file-as-project work model, and the official company profile and logo, iterated across five months to the final November 2025 edition.",
+    note: "Mongez for Legal, Financial and Tax Consultancy, Egypt. Named with permission.",
   },
   {
     slug: "educational-institution",
