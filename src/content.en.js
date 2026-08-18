@@ -435,6 +435,25 @@ export const cases = [
     note: "Memo Academy and Memo Clinic, Egypt. Phase one delivered; the road to courses, digital expansion, and franchise readiness is under way. Named with permission.",
   },
   {
+    slug: "serene-spaces",
+    tag: "From Gift to Category",
+    title: "A category of one",
+    label: "Leaders & Visionaries",
+    image: null,
+    teaser:
+      "She could do something she could not name. Every label within reach was wrong, so we stopped looking for the nearest category and built her one.",
+    body: [
+      "Rania Nassar could do something she could not name. Trained as an architect, practising energy work, and reading rooms in a way she calls Spatial Clairsentience: the memory a space holds in its walls, its corners, its light. Every label within reach was wrong. Interior designer flattened it into decor. Energy healer stripped out the engineering. Spiritual coach left the building behind entirely. Sitting adjacent to three professions and belonging to none, she had no way to tell a client what she does, and no ground to price it from.",
+      "**So we stopped looking for the nearest existing category and built her one.** Holistic Spatial Architecture: the deliberate alignment of a person's inner life with the space around them. The positioning is written as a refusal before it is written as a claim. She is not an interior designer. She is not an energy healer. She is not a spiritual coach. Only then: she is a Holistic Spatial Architect. And her authority rests on three pillars that hold the intuition to the ground, architecture and engineering, spatial and land-based geomancy, and human consciousness work. The gift stays. It is simply anchored now, in a degree.",
+      "The brand book carries the rest. A story built on one line, \"Spaces remember. Rania listens.\" A promise: a space that supports, not one that drains. A method in three movements, Reveal, Reset, Rebuild, from spatial attunement through release to geometric calibration. Two pathways for two lives, Serene Living for the home and Serene Business for the workplace. And a voice defined precisely enough to write from: the confidence of an engineer and the warmth of a healer, never mystical for its own sake, never clinical. The visual system says the same thing in colour, a cream ground and a family of blues led by navy, warmed by khaki. Nothing shouts.",
+      "Then the work left the page. Her private method became materials a client can hold: a worksheet for the eight-mansions Ming Gua method, a Flying Stars sheet, and five personal trigram profiles, each written so a person can follow it without her in the room. And the site was built so the first taste of her method is something a visitor does rather than reads, an interactive calculator that returns your personal trigram and the directions that support you, before you have spoken to her at all.",
+      "This is first delivery. The category exists now, and it has a book, a language, a set of tools, and an address.",
+    ],
+    built:
+      "Category definition and positioning, brand story and promise, the Serene Methodology in three stages, two client pathways, messaging pillars and tone of voice, a full visual identity with palette and type, a 15-page brand deck alongside a 13-section guidelines document, seven client-facing worksheets, and a single-page site with an interactive Ming Gua calculator.",
+    note: "Serene Spaces by Rania Nassar. First delivery complete: brand book, client worksheets, and site. Named with permission.",
+  },
+  {
     slug: "companions-framework",
     tag: "The Companion's Framework",
     title: "Architecture for a message that had to stay true",
