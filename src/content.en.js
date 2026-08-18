@@ -61,6 +61,10 @@ export const workPage = {
     "These are documentation, not a showcase. Some are named with permission, others stay anonymous. Some are still in motion, others complete, but all of them are alive.",
   closing: "Every story begins the same way: listening, shaping, revealing, growing.",
   builtLabel: "What I built",
+  readMore: "Read the story",
+  backToIndex: "All projects",
+  prev: "Previous",
+  next: "Next",
 };
 
 export const notesPage = {

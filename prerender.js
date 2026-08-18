@@ -4,7 +4,9 @@ import * as en from "./src/content.en.js";
 import * as ar from "./src/content.ar.js";
 
 const SITE_URL = "https://builtbymostafak.studio";
-const PATHS = ["/", "/work", "/services", "/notes", "/about", "/contact", "/terms", "/privacy", "/refund"];
+const FIXED = ["/", "/work", "/services", "/notes", "/about", "/contact", "/terms", "/privacy", "/refund"];
+// Every project also gets its own page. Slugs are shared across locales.
+const PATHS = [...FIXED, ...en.cases.map((c) => `/work/${c.slug}`)];
 const BUNDLES = { en, ar };
 
 const href = (locale, path) => {
@@ -17,6 +19,17 @@ const href = (locale, path) => {
 const canonicalPath = (locale, path) => {
   const h = href(locale, path);
   return h.endsWith("/") ? h : `${h}/`;
+};
+
+/* Case pages take their title and description from the case itself, so adding a
+ * project needs no second edit here. */
+const metaOf = (bundle, path) => {
+  if (path.startsWith("/work/")) {
+    const slug = path.slice("/work/".length);
+    const c = bundle.cases.find((x) => x.slug === slug);
+    if (c) return { title: `${c.title} | builtbymostafaK©`, description: c.teaser };
+  }
+  return bundle.meta[path] || bundle.meta["/"];
 };
 
 const esc = (s) =>
@@ -46,7 +59,7 @@ export default function prerender() {
         const dir = locale === "ar" ? "rtl" : "ltr";
 
         for (const path of PATHS) {
-          const info = bundle.meta[path] || bundle.meta["/"];
+          const info = metaOf(bundle, path);
           const url = href(locale, path);
           const canonical = SITE_URL + canonicalPath(locale, path);
 

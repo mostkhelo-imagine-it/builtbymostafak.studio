@@ -1,14 +1,12 @@
+import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
 import Media from "../components/Media";
 import { useLocale } from "../i18n";
 
-function Body({ text }) {
-  const parts = text.split(/\*\*(.*?)\*\*/g);
-  return <p>{parts.map((part, i) => (i % 2 === 1 ? <strong key={i}>{part}</strong> : part))}</p>;
-}
-
+/* The index of projects. Each card carries the thumbnail, the tag, the title and
+ * the brief, and links through to the project's own page. */
 export default function Work() {
-  const { t } = useLocale();
+  const { t, href } = useLocale();
   const p = t.workPage;
 
   return (
@@ -29,47 +27,25 @@ export default function Work() {
         </Reveal>
       </div>
 
-      {t.cases.map((c) => (
-        <article className="bmk-case" id={c.slug} key={c.slug}>
-          <Reveal>
-            <span className="tag mono">{c.tag}</span>
-          </Reveal>
-          <Reveal>
-            <h2 className="serif">{c.title}</h2>
-          </Reveal>
-          <Reveal>
-            <Media image={c.image} label={c.tag} />
-          </Reveal>
-          <div className="body-grid">
-            <Reveal className="label" as="span">
-              {c.label}
-            </Reveal>
-            <Reveal>
-              {c.body.map((text, i) => (
-                <Body key={i} text={text} />
-              ))}
-              {c.built && (
-                <div className="built">
-                  <span className="k">{p.builtLabel}</span>
-                  <p>{c.built}</p>
+      <section className="bmk-section" style={{ paddingTop: 30 }}>
+        <div className="bmk-work-grid">
+          {t.cases.map((c) => (
+            <Reveal key={c.slug} as="div">
+              <Link className="bmk-work-card" to={href(`/work/${c.slug}`)}>
+                <Media image={c.image} label={c.tag} />
+                <div className="meta">
+                  <span className="tag mono">{c.tag}</span>
+                  <h3 className="serif">{c.title}</h3>
+                  <p>{c.teaser}</p>
+                  <span className="more mono">{p.readMore}</span>
                 </div>
-              )}
-              {c.note && <p className="case-note">{c.note}</p>}
+              </Link>
             </Reveal>
-          </div>
-          {c.gallery && (
-            <Reveal>
-              <div className="bmk-case-gallery">
-                {c.gallery.map((g) => (
-                  <Media key={g.src} image={g} />
-                ))}
-              </div>
-            </Reveal>
-          )}
-        </article>
-      ))}
+          ))}
+        </div>
+      </section>
 
-      <div className="bmk-section tight" style={{ textAlign: "center" }}>
+      <div className="bmk-section tight" style={{ textAlign: "center", paddingTop: 0 }}>
         <Reveal>
           <p className="serif" style={{ fontStyle: "italic", fontSize: 22, color: "var(--accent)", margin: 0 }}>
             {p.closing}

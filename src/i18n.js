@@ -8,8 +8,30 @@ export const DEFAULT_LOCALE = "en";
 
 const bundles = { en, ar };
 
-/* The routes each locale serves, minus the /ar prefix. */
+/* The fixed routes each locale serves, minus the /ar prefix. Each case study
+ * additionally gets its own page at /work/<slug>, enumerated by casePaths. */
 export const PATHS = ["/", "/work", "/services", "/notes", "/about", "/contact", "/terms", "/privacy", "/refund"];
+
+/** One page per project. Slugs are shared across locales so the language
+ *  switcher lands on the same project rather than the index. */
+export function casePaths() {
+  return bundles.en.cases.map((c) => `/work/${c.slug}`);
+}
+
+export function findCase(locale, slug) {
+  return getBundle(locale).cases.find((c) => c.slug === slug) || null;
+}
+
+/** Case pages carry no entry in the meta map; their title and description come
+ *  from the case itself, so adding a project needs no second edit. */
+export function metaFor(locale, path) {
+  const bundle = getBundle(locale);
+  if (path.startsWith("/work/")) {
+    const c = findCase(locale, path.slice("/work/".length));
+    if (c) return { title: `${c.title} | builtbymostafaK©`, description: c.teaser };
+  }
+  return bundle.meta[path] || bundle.meta["/"];
+}
 
 /** Splits a full pathname into its locale and the locale-free path. */
 export function parsePath(pathname) {

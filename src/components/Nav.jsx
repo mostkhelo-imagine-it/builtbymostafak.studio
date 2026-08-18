@@ -4,7 +4,7 @@ import { useLocale } from "../i18n";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const { t, href, alternateHref } = useLocale();
+  const { t, href, alternateHref, locale } = useLocale();
 
   const items = [
     { to: href("/"), label: t.ui.nav.home, end: true },
@@ -28,7 +28,12 @@ export default function Nav() {
               {it.label}
             </NavLink>
           ))}
-          <Link to={alternateHref} className="bmk-link bmk-lang" aria-label={t.ui.switchLabel}>
+          <Link
+            to={alternateHref}
+            className="bmk-link bmk-lang"
+            lang={locale === "ar" ? "en" : "ar"}
+            aria-label={t.ui.switchLabel}
+          >
             {t.ui.switchTo}
           </Link>
         </div>
@@ -58,6 +63,7 @@ export default function Nav() {
           <Link
             to={alternateHref}
             className="bmk-link bmk-lang"
+            lang={locale === "ar" ? "en" : "ar"}
             style={{ fontSize: 18, marginTop: 12 }}
             onClick={() => setOpen(false)}
           >

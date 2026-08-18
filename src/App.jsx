@@ -9,7 +9,8 @@ import Notes from "./pages/Notes";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Policy from "./pages/Policy";
-import { useLocale, parsePath, getBundle, localeHref, canonicalUrl, PATHS } from "./i18n";
+import CaseStudy from "./pages/CaseStudy";
+import { useLocale, parsePath, localeHref, canonicalUrl, metaFor, PATHS } from "./i18n";
 
 function NotFound() {
   const { t, href } = useLocale();
@@ -68,8 +69,7 @@ function HeadManager() {
 
   useEffect(() => {
     const { locale, path } = parsePath(pathname);
-    const bundle = getBundle(locale);
-    const info = bundle.meta[path] || bundle.meta["/"];
+    const info = metaFor(locale, path);
 
     document.documentElement.lang = locale;
     document.documentElement.dir = locale === "ar" ? "rtl" : "ltr";
@@ -132,6 +132,8 @@ export default function App() {
             <Route key={`ar${p}`} path={localeHref("ar", p)} element={<Page />} />,
           ];
         })}
+        <Route path="/work/:slug" element={<CaseStudy />} />
+        <Route path="/ar/work/:slug" element={<CaseStudy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

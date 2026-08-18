@@ -104,7 +104,7 @@ export default function Home() {
         <div className="bmk-work-grid">
           {preview.map((w) => (
             <Reveal key={w.slug} as="div">
-              <Link className="bmk-work-card" to={`${href("/work")}#${w.slug}`}>
+              <Link className="bmk-work-card" to={href(`/work/${w.slug}`)}>
                 <Media image={w.image} label={w.tag} />
                 <div className="meta">
                   <span className="tag mono">{w.tag}</span>
