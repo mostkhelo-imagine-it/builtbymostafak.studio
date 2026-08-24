@@ -406,8 +406,38 @@ export const cases = [
     label: "Entities & Foundations",
     image: { src: "/assets/land-discussion.jpg", caption: "On site at Oriental Coast, Marsa Alam" },
     gallery: [
-      { src: "/assets/land-walk.jpg", caption: "Walking the coastline" },
-      { src: "/assets/evening-session.jpg", caption: "Evening session on site" },
+      {
+        src: "/assets/coast-resort.jpg",
+        caption: "The resort at Oriental Coast, Marsa Alam",
+      },
+      {
+        src: "/assets/land-walk.jpg",
+        caption: "Walking the coastline",
+      },
+      {
+        src: "/assets/site-huddle.jpg",
+        caption: "Reading the site together",
+      },
+      {
+        src: "/assets/site-briefing.jpg",
+        caption: "Briefing on the ground",
+      },
+      {
+        src: "/assets/site-lakeside.jpg",
+        caption: "At the water's edge",
+      },
+      {
+        src: "/assets/site-conversation.jpg",
+        caption: "Working through the terms on site",
+      },
+      {
+        src: "/assets/field-desk.jpg",
+        caption: "The numbers, worked out in the field",
+      },
+      {
+        src: "/assets/evening-session.jpg",
+        caption: "Evening session on site",
+      },
     ],
     teaser:
       "The land had obvious value, but that alone doesn't close a deal. Other developers were already making offers, and most of those offers weren't built around what actually benefited the landowning family.",
@@ -424,7 +454,16 @@ export const cases = [
     tag: "From Craft to Message",
     title: "Discipline as a form of self-respect",
     label: "Talents & Creators",
-    image: null,
+    image: {
+      src: "/assets/set-direction.jpg",
+      caption: "Directing the shoot day",
+    },
+    gallery: [
+      {
+        src: "/assets/monitor-review.jpg",
+        caption: "Reviewing a take on the monitor",
+      },
+    ],
     teaser:
       "A barber who had mastered his craft, a clinic that carried the same conviction, and nowhere that joined form and substance. So we built the house that does.",
     body: [
@@ -443,7 +482,10 @@ export const cases = [
     tag: "From Gift to Category",
     title: "A category of one",
     label: "Leaders & Visionaries",
-    image: null,
+    image: {
+      src: "/assets/interiors-board.jpg",
+      caption: "Spatial studies from the first delivery",
+    },
     teaser:
       "She could do something she could not name. Every label within reach was wrong, so we stopped looking for the nearest category and built her one.",
     body: [
@@ -462,7 +504,10 @@ export const cases = [
     tag: "The Companion's Framework",
     title: "Architecture for a message that had to stay true",
     label: "Leaders & Visionaries",
-    image: null,
+    image: {
+      src: "/assets/evening-terrace.jpg",
+      caption: "An early conversation, off the record",
+    },
     teaser:
       "A message with depth and reach needed a structure that let it travel globally without losing its center.",
     body: [
@@ -479,7 +524,10 @@ export const cases = [
     tag: "From First Paper to Last Stamp",
     title: "People don't want a firm, they want one point of contact",
     label: "Entities & Foundations",
-    image: null,
+    image: {
+      src: "/assets/location-direction.jpg",
+      caption: "Working through the positioning on site",
+    },
     teaser:
       "Cassation lawyers, former police generals, an MP with a doctorate in international law, tax names trusted since the nineties. Formidable one by one, and no shared language between them.",
     body: [
@@ -498,7 +546,10 @@ export const cases = [
     tag: "The Educational Institution",
     title: "From a training centre to a learning journey",
     label: "Entities & Foundations",
-    image: null,
+    image: {
+      src: "/assets/storyboard-session.jpg",
+      caption: "A full room, working through the narrative",
+    },
     teaser:
       "Strong courses, loyal alumni, and a brand so fragmented no one could explain why the teaching felt different.",
     body: [
@@ -515,7 +566,10 @@ export const cases = [
     tag: "The Young Collective",
     title: "How structure can liberate creativity",
     label: "Talents & Creators",
-    image: null,
+    image: {
+      src: "/assets/shoot-day-crew.jpg",
+      caption: "The collective between setups",
+    },
     teaser:
       "Raw energy, distinct talents, no alignment. A group that needed coherence without losing freedom.",
     body: [

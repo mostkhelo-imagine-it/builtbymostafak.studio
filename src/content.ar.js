@@ -115,8 +115,32 @@ export const cases = [
     },
     gallery: [
       {
+        src: "/assets/coast-resort.jpg",
+        caption: "المنتجع في أورينتال كوست، مرسى علم",
+      },
+      {
         src: "/assets/land-walk.jpg",
         caption: "على امتداد الساحل",
+      },
+      {
+        src: "/assets/site-huddle.jpg",
+        caption: "قراءة الموقع معًا",
+      },
+      {
+        src: "/assets/site-briefing.jpg",
+        caption: "جلسة تعريف على الأرض",
+      },
+      {
+        src: "/assets/site-lakeside.jpg",
+        caption: "عند حافة الماء",
+      },
+      {
+        src: "/assets/site-conversation.jpg",
+        caption: "مناقشة البنود في الموقع",
+      },
+      {
+        src: "/assets/field-desk.jpg",
+        caption: "الأرقام، تُحسب في الموقع",
       },
       {
         src: "/assets/evening-session.jpg",
@@ -143,7 +167,16 @@ export const cases = [
     tag: "من الصنعة إلى الرسالة",
     title: "حين يصبح الانضباط طريقة لاحترام نفسك وشغلك",
     label: "المواهب والمبدعون",
-    image: null,
+    image: {
+      src: "/assets/set-direction.jpg",
+      caption: "إدارة يوم التصوير",
+    },
+    gallery: [
+      {
+        src: "/assets/monitor-review.jpg",
+        caption: "مراجعة لقطة على الشاشة",
+      },
+    ],
     teaser:
       "حرفي أتقن مهنته، وعيادة تحمل الفكرة نفسها، لكن لم يكن هناك إطار يجمع الاثنين. فبنينا هذا الإطار.",
     body: [
@@ -170,7 +203,10 @@ export const cases = [
     tag: "من الموهبة إلى الفئة",
     title: "حين لا تناسبك أي فئة، ابنِ فئتك",
     label: "القادة وأصحاب الرؤية",
-    image: null,
+    image: {
+      src: "/assets/interiors-board.jpg",
+      caption: "دراسات مكانية من التسليم الأول",
+    },
     teaser:
       "كانت تعرف كيف تساعد الناس، لكنها لم تجد اسمًا يصف ما تفعله بدقة. فبدلًا من إجبارها على فئة موجودة، بنينا فئة تناسب عملها.",
     body: [
@@ -201,7 +237,10 @@ export const cases = [
     tag: "إطار الرفيق",
     title: "كيف تبني نظامًا يحمي الرسالة من أن تضيع",
     label: "القادة وأصحاب الرؤية",
-    image: null,
+    image: {
+      src: "/assets/evening-terrace.jpg",
+      caption: "محادثة مبكرة، بعيدًا عن التسجيل",
+    },
     teaser:
       "رسالة كبيرة وحساسة، احتاجت إلى بنية تساعدها على الوصول إلى الناس من غير أن تفقد معناها.",
     body: [
@@ -222,7 +261,10 @@ export const cases = [
     tag: "من أول ورقة إلى آخر ختم",
     title: "الناس لا تحتاج مكتبًا آخر، بل جهة واحدة تمسك الملف",
     label: "المؤسسات والكيانات",
-    image: null,
+    image: {
+      src: "/assets/location-direction.jpg",
+      caption: "العمل على التموضع في الموقع",
+    },
     teaser:
       "خبرات قوية وأسماء كبيرة، لكن لم تكن هناك لغة واحدة تجمعها. فبدأنا من المشكلة التي يواجهها العميل، لا من أسماء الخدمات.",
     body: [
@@ -249,7 +291,10 @@ export const cases = [
     tag: "المؤسسة التعليمية",
     title: "من مركز تدريب إلى تجربة تعلّم",
     label: "المؤسسات والكيانات",
-    image: null,
+    image: {
+      src: "/assets/storyboard-session.jpg",
+      caption: "غرفة كاملة، نعمل على السردية",
+    },
     teaser:
       "برامج قوية وخريجون أوفياء، لكن العلامة لم تكن تشرح ما الذي يجعل التجربة مختلفة.",
     body: [
@@ -270,7 +315,10 @@ export const cases = [
     tag: "الجماعة الشابة",
     title: "كيف يمكن للهيكل أن يعطي الإبداع مساحة أكبر",
     label: "المواهب والمبدعون",
-    image: null,
+    image: {
+      src: "/assets/shoot-day-crew.jpg",
+      caption: "الجماعة بين لقطة وأخرى",
+    },
     teaser:
       "مواهب مختلفة وطاقة كبيرة، لكن من دون إطار يجمعها. فبنينا نظامًا يعطيهم التماسك من غير أن يأخذ منهم حريتهم.",
     body: [
