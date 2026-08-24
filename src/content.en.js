@@ -32,7 +32,7 @@ export const story = {
     {
       num: "I'm not an agency",
       body: "I don't deliver volume or monthly content. My work is not typical agency output. It's not about a flashy logo, a neat campaign, or a clean brochure. I sit at the conceptual layer, before design and before marketing, where nothing exists yet. From messy feelings and scattered thoughts, I create the first structure, the first story, the first form that makes others say: \"Now I see it.\"",
-      caption: "On site, reading the ground first",
+      caption: "On a shoot day, with one of the region's stars",
     },
     {
       num: "Intentional, not ordinary",

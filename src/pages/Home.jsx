@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <section className="bmk-hero">
         <div className="bmk-hero-bg">
-          <img src="/assets/evening-session.jpg" alt="" aria-hidden="true" />
+          <img src="/assets/coast-horizon.jpg" alt="" aria-hidden="true" />
         </div>
         <div className="bmk-hero-content">
           <span className="mono bmk-eyebrow">{t.hero.eyebrow}</span>
@@ -52,7 +52,7 @@ export default function Home() {
               <Reveal>
                 <Media
                   image={{
-                    src: ["/assets/land-walk.jpg", "/assets/portrait.jpg", "/assets/evening-session.jpg"][i],
+                    src: ["/assets/shoot-day.jpg", "/assets/portrait.jpg", "/assets/evening-session.jpg"][i],
                     caption: row.caption,
                   }}
                 />
